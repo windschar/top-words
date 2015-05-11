@@ -2,14 +2,21 @@
 
 require 'sinatra'
 require 'sinatra/contrib'
+require 'sqlite3'
+
 
 
 class Webapp < Sinatra::Base
 
-    
-    get '/' do
-        redirect '/home.html'
-    end
+  set :port, 8900
 
-    run! if app_file = $0
+  get '/' do
+    redirect '/home.html'
+  end
+
+  get '/v1/words' do
+    send_file File.new("./data/wlist.json")
+  end
+
+  run! if app_file = $0
 end
