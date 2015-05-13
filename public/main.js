@@ -2,6 +2,7 @@
 
 angular.module("myApp", [])
     .controller('DefaultCtrl', function($scope, $http) {
+
         $scope.known_words = new Array();
         $scope.words = new Array();
 
@@ -13,6 +14,10 @@ angular.module("myApp", [])
 
         $scope.iknowit = function(word) {
             $scope.known_words.push(word);
+        }
+
+        $scope.save = function() {
+            
         }
 
 

@@ -23,7 +23,7 @@ class Webapp < Sinatra::Base
     json settings.words
   end
 
-  post '/v1/update/:word' do 
+  post '/v1/update' do 
 
   end
 
