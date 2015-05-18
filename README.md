@@ -1,2 +1,3 @@
 # top-words
-a simple webapp for learning english words better
+
+run "python -m SimpleHTTPServer 8080" to load it
